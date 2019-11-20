@@ -5,6 +5,9 @@ A simple e-commerce website developed with Django Python.
 
 ![django_image](https://github.com/nicolaschen1/e-commerce_website_django_python/blob/master/images/python_django.jpeg)
 
+## Author
+Nicolas Chen
+
 ## License
 MIT License
 
