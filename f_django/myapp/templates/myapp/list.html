@@ -1,0 +1,21 @@
+{% extends "layouts/dispostion.html" %}
+
+{% block content %}<h1>List</h1>
+<h2> Nombre d'article Disponible ({{Articles|length}})</h2>
+
+
+{% block title %}{% endblock %}
+{% for Article in Articles %}
+<article>
+	<h2> <a href = "/myapp/Articles/{{Article.id}}">{{Article.id}} -- {{Article.titre}}</a></h2>
+	<p>{{Article.Commentaire|truncatewords:1}}</p>
+	<p> <a href = "/myapp/Articles/{{Article.id}}">Lire la Suite</a> </p>
+	
+</article>
+{% if not forloop.last %}
+<hr>
+{% endif %}
+{% empty %}
+<p>Aucun Article Disponible </p>
+{% endfor %}
+{% endblock %}

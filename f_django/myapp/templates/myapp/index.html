@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+   
+
+BONJOUR NOUS SOMMES <p> {{today}}</p>
+<h1>{{filtre|truncatewords:3}}</h1>
+{% if today.day == 1 %}
+ c'est le premier jour du mois
+ {% elif today.day == 30 %}
+ c'est le dernier jour du mois 
+ {% else %}
+ce n'est ni le premier ni le dernier jour de l'annee
+ {%endif%}
+
+
+<ul>
+	{% for days in jourSem %}
+	<li>{{days}}</li>
+	{% endfor %}
+</ul>
+
+</body>
+</html>
